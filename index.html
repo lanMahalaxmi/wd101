@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-md mx-auto bg-white p-8 rounded shadow-md">
+    <h2 class="text-2xl mb-4">Registration Form</h2>
+    <form id="registrationForm" class="space-y-4">
+      <label for="name" class="block font-medium">Name</label>
+      <input type="text" id="name" name="name" class="w-full border-gray-300 rounded-md">
+
+      <label for="email" class="block font-medium">Email</label>
+      <input type="email" id="email" name="email" class="w-full border-gray-300 rounded-md">
+
+      <label for="password" class="block font-medium">Password</label>
+      <input type="password" id="password" name="password" class="w-full border-gray-300 rounded-md">
+
+      <label for="dob" class="block font-medium">Date of Birth (between 18 and 55)</label>
+      <input type="date" id="dob" name="dob" class="w-full border-gray-300 rounded-md">
+
+      <label for="terms" class="flex items-center">
+        <input type="checkbox" id="terms" name="terms" class="mr-2">
+        <span>I accept the terms and conditions</span>
+      </label>
+
+      <button type="submit" class="w-full bg-blue-500 text-white font-medium py-2 rounded-md">Register</button>
+    </form>
+
+    <h2 class="text-2xl mt-8">Registered Users</h2>
+    <table id="userTable" class="w-full mt-4 border-collapse border border-gray-300">
+      <thead>
+        <tr>
+          <th class="border border-gray-300 p-2">Name</th>
+          <th class="border border-gray-300 p-2">Email</th>
+          <th class="border border-gray-300 p-2">Password</th>
+          <th class="border border-gray-300 p-2">DOB</th>
+          <th class="border border-gray-300 p-2">Accepted terms?</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
