@@ -3,51 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link href="styles.css" rel="stylesheet"> -->
   <title>Registration Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 p-8">
-  <div class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
-    <h1 class="text-2xl font-semibold mb-4">Registration Form</h1>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-md mx-auto bg-white p-8 rounded shadow-md">
+    <h2 class="text-2xl mb-4">Registration Form</h2>
     <form id="registrationForm" class="space-y-4">
-      <label for="name">Name:</label>
-      <input type="text" id="name" class="w-full p-2 border rounded-md" required><br><br>
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" class="w-full p-2 border rounded-md" required><br><br>
-      
-      <label for="password">Password:</label>
-      <input type="password" id="password" class="w-full p-2 border rounded-md" required><br><br>
-      
-      <label for="dob">Date of Birth:</label>
-      <input type="date" id="dob" class="w-full p-2 border rounded-md" required><br><br>
-      
-      <label for="acceptTerms" class="flex items-center">
-        <input type="checkbox" id="acceptTerms" class="mr-2" required>
-        Accept Terms
+      <label for="name" class="block font-medium">Name</label>
+      <input type="text" id="name" name="name" class="w-full border-gray-300 rounded-md">
+
+      <label for="email" class="block font-medium">Email</label>
+      <input type="email" id="email" name="email" class="w-full border-gray-300 rounded-md">
+
+      <label for="password" class="block font-medium">Password</label>
+      <input type="password" id="password" name="password" class="w-full border-gray-300 rounded-md">
+
+      <label for="dob" class="block font-medium">Date of Birth (between 18 and 55)</label>
+      <input type="date" id="dob" name="dob" class="w-full border-gray-300 rounded-md">
+
+      <label for="terms" class="flex items-center">
+        <input type="checkbox" id="terms" name="terms" class="mr-2">
+        <span>I accept the terms and conditions</span>
       </label>
-      <br><br>
-      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
-        Register
-      </button><br><br>
+
+      <button type="submit" class="w-full bg-blue-500 text-white font-medium py-2 rounded-md">Register</button>
     </form>
-    
-    <table id="usersTable" class="mt-6 w-full">
+
+    <h2 class="text-2xl mt-8">Registered Users</h2>
+    <table id="userTable" class="w-full mt-4 border-collapse border border-gray-300">
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Password</th>
-          <th>DOB</th>
-          <th>Accepted terms?</th>
+          <th class="border border-gray-300 p-2">Name</th>
+          <th class="border border-gray-300 p-2">Email</th>
+          <th class="border border-gray-300 p-2">Password</th>
+          <th class="border border-gray-300 p-2">DOB</th>
+          <th class="border border-gray-300 p-2">Accepted terms?</th>
         </tr>
       </thead>
-      <tbody>
-        <!-- Table rows will be added dynamically using JavaScript -->
-      </tbody>
+      <tbody></tbody>
     </table>
   </div>
-  
-  <script src="index.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>
